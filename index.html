@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="./assets/images/small-logo.webp" type="image/webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <title>Youtube</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-burger" >
+                <button class="nav-icon burger-button" 
+                id="burger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="logo" [routerLink]="['']">
+                    <div class="logo-img">
+                    </div>
+                </h1>
+            </div>
+            <div class="search-box">
+                <div class="search">
+                    <input type="text" class="search-bar" placeholder="ძიება">
+                    <button class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="nav-icon mic-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+            <div class="user-dash">
+                <div class="icons">
+                    <div class="nav-icon user-icon user-camera">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="nav-icon user-icon user-notif">
+                        <i class="far fa-bell"></i>
+                    </div>
+                    <div class="nav-icon user-pfp" id="pfp">
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="authenticate hidden" id="authenticate">
+            <p class="authenticate__title">
+                LOG IN
+            </p>
+            <form class="authenticate__form" id="authenticateForm">
+                <input type="text" class="authenticate__form__input" placeholder="Email" Id="emailInput">
+                <div class="authenticate__form__validation hidden" id="emailValidation">Email is invalid!</div>
+                <input type="text" class="authenticate__form__input" placeholder="Profile Image link" Id="imgInput">
+                <div class="authenticate__form__validation hidden" id="imageValidation">link is invalid!</div>
+                <input type="password" class="authenticate__form__input" placeholder="Password">
+                <button type="submit" class="authenticate__form__button">LOG IN</button>
+            </form>
+        </div>
+        
+        <div class="side-nav-small hidden" id="small-side-nav">
+            <div class="side-icons">
+                <i class="fas fa-home"></i> მთავარი
+            </div>
+            <div class="side-icons">
+                <i class="fas fa-play-circle"></i> shorts
+            </div>
+            <div class="side-icons">
+                <i class="fas fa-check-double"></i> გამოწერები
+            </div>
+            <div class="side-icons">
+                <i class="fab fa-youtube-square"></i> თქვენ
+            </div>
+        </div>
+        
+        <div class="side-nav" id="big-side-nav">
+            <div class="main-icons">
+                <div class="side-icon main-icon">
+                    <i class="fas fa-home"></i> მთავარი
+                </div>
+                <div class="side-icon main-icon">
+                    <i class="fas fa-play-circle"></i> shorts
+                </div>
+                <div class="side-icon main-icon">
+                    <i class="fas fa-check-double"></i> გამოწერები
+                </div>
+            </div>
+            <hr>
+        
+            <div class="you-icons">
+                <div class="side-icon head-icon">
+                    თქვენ   <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="side-icon you-icon">
+                    <i class="fas fa-user-circle"></i> თქვენი არხი
+                </div>
+                <div class="side-icon you-icon">
+                    <i class="fas fa-history"></i> ისტორია
+                </div>
+                <div class="side-icon you-icon">
+                    <i class="fas fa-play"></i> თქვენი ვიდეოები
+                </div>
+                <div class="side-icon you-icon">
+                    <i class="far fa-clock"></i> მოგვიანებით სან...
+                </div>
+                <div class="side-icon you-icon" id="playlist-show-more">
+                    <i class="fas fa-chevron-down"></i> მეტის ჩვენება
+                </div>
+        
+        
+                <div class="side-icon you-icon playlisthide hidden" >
+                    <i class="fas fa-list-ul"></i> playlist 1
+                </div>
+                <div class="side-icon you-icon playlisthide hidden" >
+                    <i class="fas fa-list-ul"></i> playlist 2
+                </div>
+                <div class="side-icon you-icon playlisthide hidden" id="playlist-show-less">
+                    <i class="fas fa-chevron-up"></i> ნაკლების ჩვენება
+                </div>
+        
+            </div>
+        
+            <hr>
+        
+            <div class="sub-icons">
+                <p class="icons-header">გამოწერები</p>
+                
+                <div class="side-icon sub-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+        
+                <div class="side-icon you-icon" id="show-more-sub">
+                    <i class="fas fa-chevron-down"></i> მეტის ჩვენება
+                </div>
+        
+                <div class="side-icon sub-icon subhide hidden" >
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon subhide hidden" >
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+                <div class="side-icon sub-icon subhide hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/ka/9/97/Katsebi.jpg" alt="pfp"> კაცები
+                </div>
+        
+                <div class="side-icon you-icon subhide hidden" id="show-less-sub">
+                    <i class="fas fa-chevron-up"></i> ნაკლების ჩვენება
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="discover-icons">
+                <p class="icons-header">აღმოჩენა</p>
+        
+                <div class="side-icon discover-icon">
+                    <i class="fas fa-fire"></i> პოპულარულები
+                </div>
+                <div class="side-icon discover-icon">
+                    <i class="fas fa-music"></i> მუსიკა
+                </div>
+                <div class="side-icon discover-icon">
+                    <i class="fas fa-gamepad"></i> ვიდეო თამაშები
+                </div>
+                <div class="side-icon discover-icon">
+                    <i class="fas fa-trophy"></i> სპორტი
+                </div>
+               
+            </div>
+        
+            <hr>
+        
+            <div class="setting-icons">
+                <div class="side-icon">
+                    <i class="fas fa-cog"></i> პარამეტრები
+                </div>
+                <div class="side-icon">
+                    <i class="fab fa-font-awesome-flag"></i> შეტყობინების...
+                </div>
+                <div class="side-icon">
+                    <i class="far fa-question-circle"></i> დახმარება
+                </div>
+                <div class="side-icon setting-icon">
+                    <i class="fas fa-exclamation-circle"></i> გამოხმაურება
+                </div>
+            </div>
+        
+            <hr>
+        
+            <div class="copyright">
+                <p class="copyright-paragraph">
+                    ჩვენ შესახებპრესასაავტორო უფლებებიდაგვიკავშირდითშემქ
+                    მნელებირეკლამირებადეველოპერები
+                    პირობებიკონფიდენციალურობაწესები და უსაფრთხოება
+                    როგორ მუშაობს YouTubeგამოსცადეთ ახალი ფუნქციები
+                    
+                    <br>
+                    <br>
+                    © 2023 Google LLC
+                </p>
+            </div>
+        
+        </div>
+
+        <div class="main-content">
+            
+        </div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

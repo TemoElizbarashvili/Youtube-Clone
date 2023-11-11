@@ -1,0 +1,6 @@
+@use "sass:math";
+
+@mixin title-main {
+    font-size: 2rem;
+    color: $textColor;
+}
