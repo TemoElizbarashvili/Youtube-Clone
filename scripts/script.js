@@ -3,7 +3,7 @@ let isLoggedIn = false;
 let burger = document.getElementById('burger');
 let smallSideNav = document.getElementById('small-side-nav');
 let bigSideNav = document.getElementById('big-side-nav');
-
+let categoryToMerge = document.getElementById('category');
 burger.addEventListener('click', function() {
     smallSideNav.classList.contains('hidden') ? smallSideNav.classList.remove('hidden') : smallSideNav.classList.add('hidden');
     bigSideNav.classList.contains('hidden') ? bigSideNav.classList.remove('hidden') : bigSideNav.classList.add('hidden');

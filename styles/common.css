@@ -17,9 +17,10 @@ main {
 .navbar {
   height: 60px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
+  z-index: 100;
 }
 
 .logo-burger {
@@ -174,6 +175,7 @@ main {
   height: 100vh;
   width: 4%;
   min-width: 76.8px;
+  z-index: 50;
 }
 .side-nav-small .side-icons {
   width: 90%;
@@ -210,6 +212,7 @@ main {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+  z-index: 50;
 }
 .side-nav .main-icon:hover {
   background-color: rgba(255, 255, 255, 0.12);
@@ -218,7 +221,7 @@ main {
 }
 
 .side-nav:hover {
-  overflow-y: scroll;
+  overflow-y: scroll !important;
 }
 
 .side-icon {
@@ -317,12 +320,6 @@ i {
 
 .hidden {
   display: none !important;
-}
-
-.main-content {
-  width: 100%;
-  height: 100vh;
-  background-color: white;
 }
 
 .authenticate {
