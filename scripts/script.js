@@ -4,21 +4,21 @@ let burger = document.getElementById('burger');
 let smallSideNav = document.getElementById('small-side-nav');
 let bigSideNav = document.getElementById('big-side-nav');
 let categoryToMerge = document.getElementById('category');
-let videos = document.getElementById('main-cont')
+let mainContainer = document.getElementById('main-cont')
 burger.addEventListener('click', function() {
     if (smallSideNav.classList.contains('hidden')){
         smallSideNav.classList.remove('hidden');
-        videos.classList.add('small-margin');
+        mainContainer.classList.add('small-margin');
     } else {
         smallSideNav.classList.add('hidden');
-        videos.classList.remove('small-margin');
+        mainContainer.classList.remove('small-margin');
     }
     if (bigSideNav.classList.contains('hidden')) {
         bigSideNav.classList.remove('hidden');
-        videos.classList.add('big-margin');
+        mainContainer.classList.add('big-margin');
     } else {
         bigSideNav.classList.add('hidden');
-        videos.classList.remove('big-margin');
+        mainContainer.classList.remove('big-margin');
     }
 });
 
