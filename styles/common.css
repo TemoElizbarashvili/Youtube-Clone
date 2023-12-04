@@ -12,6 +12,11 @@ body {
 
 main {
   display: flex;
+  overflow-x: hidden;
+}
+
+header {
+  height: 60px;
 }
 
 .navbar {
@@ -171,9 +176,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px;
   height: 100vh;
   width: 4%;
+  position: fixed;
   min-width: 76.8px;
   z-index: 50;
 }
@@ -207,11 +212,11 @@ main {
   height: 100vh;
   width: 249.6px;
   min-width: 248px;
-  padding-top: 70px;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+  position: fixed;
   z-index: 50;
 }
 .side-nav .main-icon:hover {

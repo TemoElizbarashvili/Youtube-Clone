@@ -4,9 +4,22 @@ let burger = document.getElementById('burger');
 let smallSideNav = document.getElementById('small-side-nav');
 let bigSideNav = document.getElementById('big-side-nav');
 let categoryToMerge = document.getElementById('category');
+let videos = document.getElementById('main-cont')
 burger.addEventListener('click', function() {
-    smallSideNav.classList.contains('hidden') ? smallSideNav.classList.remove('hidden') : smallSideNav.classList.add('hidden');
-    bigSideNav.classList.contains('hidden') ? bigSideNav.classList.remove('hidden') : bigSideNav.classList.add('hidden');
+    if (smallSideNav.classList.contains('hidden')){
+        smallSideNav.classList.remove('hidden');
+        videos.classList.add('small-margin');
+    } else {
+        smallSideNav.classList.add('hidden');
+        videos.classList.remove('small-margin');
+    }
+    if (bigSideNav.classList.contains('hidden')) {
+        bigSideNav.classList.remove('hidden');
+        videos.classList.add('big-margin');
+    } else {
+        bigSideNav.classList.add('hidden');
+        videos.classList.remove('big-margin');
+    }
 });
 
 let showMorePlaylists = document.getElementById("playlist-show-more");
