@@ -1,5 +1,7 @@
-let categories = ['ყველა', 'ვიდეო თამაშები', 'პირდაპირი', 'მიქსები', 
-'სიმულაციური ვიდეოები', 'კომედიური სკეტჩი' , 'მძაფრსიუჟეტიანი ვიდეო თამაშები', 'სპორტული', 'ფეხბურთი', 'ახლახან ატვირთული','სპორტული', 'ფეხბურთი', 'ახლახან ატვირთული', 'ნანახი', 'თქვენთვის ახალი'];
+let categories = ['ყველა', 'ვიდეო თამაშები', 'პირდაპირი', 'მიქსები', 'მაგარი ვიდეოები', 'საშიში', 'კომედია', 'ტრენდინგი', 'მუსიკალური', 'ყველა', 'ვიდეო თამაშები', 'პირდაპირი', 'მიქსები', 'მაგარი ვიდეოები', 'საშიში', 'კომედია', 'ტრენდინგი', 'მუსიკალური', 'ფრენბურთი', 'ბავშვებისთვის', 'პოლიტიკა',
+'სიმულაციური ვიდეოები', 'კომედიური სკეტჩი' , 'მძაფრსიუჟეტიანი ვიდეო თამაშები',
+ 'სპორტული', 'კომედიური სკეტჩი' , 'მძაფრსიუჟეტიანი ვიდეო თამაშები', 'სპორტული', 'სპორტული',
+  'ფეხბურთი', 'ახლახან ატვირთული','სპორტული', 'ფეხბურთი', 'ახლახან ატვირთული', 'ნანახი', 'თქვენთვის ახალი'];
 const videoArray = [
     {
         imageUrl: 'https://i.ytimg.com/vi/u3WajuShD1w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBvakB0yzlV2j4UWLn1WlkxIWHmlA',
@@ -102,9 +104,9 @@ const videoArray = [
 
 let categoriesContainer = document.getElementById('categories');
 
-
-for (let i = 0; i < 11; i++) {
-    if (i === 10) {
+const categoriesHalf = categories.length/2;
+for (let i = 0; i < categoriesHalf; i++) {
+    if (i === categoriesHalf-1) {
         const div = document.createElement('div');
         div.classList.add('category-content__categories__item');
         div.id = 'rightArrow';
@@ -114,7 +116,6 @@ for (let i = 0; i < 11; i++) {
         div.appendChild(icon);        
         categoriesContainer.appendChild(div);
     } else {
-
         const div = document.createElement('div');
         div.classList.add('category-content__categories__item');
         div.textContent = categories[i];
@@ -137,7 +138,7 @@ rightArrow.addEventListener('click', function() {
             leftArrow = value;
             leftArrow.addEventListener('click', function() {
                 contents.forEach((value, index) => {
-                    if (index === 10){
+                    if (index === categoriesHalf-1){
                         const icon = document.createElement('i');
                         icon.classList.add('fas');
                         icon.classList.add('fa-chevron-right');

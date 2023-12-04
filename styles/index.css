@@ -10,6 +10,7 @@
   justify-content: space-evenly;
   align-items: center;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 @media only screen and (max-width: 1600px) {
   .category-content__categories {
@@ -37,6 +38,7 @@
 
 .sideNav-videos {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .animate {
@@ -54,9 +56,9 @@
 }
 .videos__card {
   height: 289px;
-  width: 19%;
+  width: 300px;
   margin-bottom: 20px;
-  margin-left: 2px;
+  margin-right: 4px;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -101,7 +103,8 @@
 }
 
 .big-margin {
-  margin-left: 250px;
+  box-sizing: border-box;
+  padding-left: 250px;
 }
 
 @keyframes fadeIn {
