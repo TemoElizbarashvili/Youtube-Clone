@@ -18,9 +18,11 @@
                 id="burger">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1 class="logo" [routerLink]="['']">
-                    <div class="logo-img">
-                    </div>
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <div class="logo-img">
+                        </div>
+                    </a>
                 </h1>
             </div>
             <div class="search-box">
@@ -41,30 +43,18 @@
                     </div>
                     <div class="nav-icon user-icon user-notif">
                         <i class="far fa-bell"></i>
+                        
                     </div>
-                    <div class="nav-icon user-pfp" id="pfp">
-                    </div>
+                    <a id="goToLogin">
+                        <div class="nav-icon user-pfp" id="pfp">
+                        </div>
+                    </a>
                 </div>
                 
             </div>
         </nav>
     </header>
     <main>
-
-        <div class="authenticate hidden" id="authenticate">
-            <p class="authenticate__title">
-                LOG IN
-            </p>
-            <form class="authenticate__form" id="authenticateForm">
-                <input type="text" class="authenticate__form__input" placeholder="Email" Id="emailInput">
-                <div class="authenticate__form__validation hidden" id="emailValidation">Email is invalid!</div>
-                <input type="text" class="authenticate__form__input" placeholder="Profile Image link" Id="imgInput">
-                <div class="authenticate__form__validation hidden" id="imageValidation">link is invalid!</div>
-                <input type="password" class="authenticate__form__input" placeholder="Password" id="password">
-                <button type="submit" class="authenticate__form__button">LOG IN</button>
-            </form>
-        </div>
-        
         <div class="side-nav-small hidden" id="small-side-nav">
             <div class="side-icons">
                 <i class="fas fa-home"></i> მთავარი

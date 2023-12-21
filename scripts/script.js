@@ -49,80 +49,20 @@ showLessSUb.addEventListener('click', function() {
     showMoreSub.classList.remove('hidden');
 });
 
-let authForm = document.getElementById("authenticate");
-let profilePicture = document.getElementById("pfp");
 
-profilePicture.addEventListener("click", function() {
-    if (!isLoggedIn) {
-        authForm.classList.contains('hidden') ? authForm.classList.remove('hidden') : authForm.classList.add('hidden');
-    } else { 
-        isLoggedIn = false;
-        localStorage.removeItem('email');
-        localStorage.removeItem('profileImage');
-        profilePicture.style.backgroundImage = 'url("../assets/images/pfp.jpg")';
-    }
-});
+let loginPageButton = document.getElementById("goToLogin");
 
+loginPageButton.addEventListener("click", () => {
+    var isLoggedIn = localStorage.getItem("isLoggedIn");
 
-
-
-let submitButton = document.getElementsByClassName("authenticate__form__button")[0];
-submitButton.disabled = true;
-let emailInput = document.getElementById("emailInput");
-let imageInput = document.getElementById("imgInput");
-let emailValidation = document.getElementById("emailValidation");
-let imageValidation = document.getElementById('imageValidation');
-let isMailValid = false;
-let isImageValid = false;
-emailInput.addEventListener('change', function() {
-
-    const email =emailInput.value;
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-    if (emailPattern.test(email)) {
-        isMailValid = true;
-        isImageValid ? submitButton.disabled = false : submitButton.disabled = true;
-        emailInput.style.border = " 0.2px solid #6D9886";
-        emailValidation.classList.add('hidden');
+    if(isLoggedIn) {
+        if (confirm("Do you really want to log out? ")) {
+            localStorage.clear();
+        } else {
+            
+        }
     } else {
-        emailInput.style.border = "0.2px solid red";
-        isMailValid = false;
-        submitButton.disabled = true;
-        emailValidation.classList.remove('hidden');
+        window.location.assign("../authentification.html");
     }
 });
 
-imageInput.addEventListener('change', function() {
-    const link = imageInput.value;
-    const linkPattern = /^(https?|http|ftp):\/\/[^\s/$.?#].[^\s]*$/;
-
-    if (linkPattern.test(link)) {
-        isImageValid = true;
-        isMailValid ? submitButton.disabled = false : submitButton.disabled = true;
-        imageInput.style.border = " 0.2px solid #6D9886";
-        imageValidation.classList.add('hidden');
-    } else {
-        isImageValid = false;
-        submitButton.disabled = true;
-        imageInput.style.border = "0.2px solid red";
-        imageValidation.classList.remove('hidden');
-    }
-});
-
-let form = document.getElementById("authenticateForm");
-form.addEventListener('submit', function() {
-    localStorage.setItem("profileImage", imageInput.value);
-    localStorage.setItem("email", emailInput.value);
-});
-
-function setUser() {
-    const link = localStorage.getItem("profileImage");
-    if (link != null) {
-        profilePicture.style.backgroundImage = `url("${link}")`;
-        isLoggedIn = true;
-    } else {
-        isLoggedIn = false;
-    }
-}
-
-setUser();

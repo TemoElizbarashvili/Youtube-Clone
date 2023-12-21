@@ -4,3 +4,9 @@
     font-size: 2rem;
     color: $textColor;
 }
+
+@mixin background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

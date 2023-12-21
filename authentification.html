@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/authentification.css">
+    <link rel="icon" href="./assets/images/small-logo.webp" type="image/webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <title>Youtube</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-burger" >
+            <button class="nav-icon burger-button" 
+            id="burger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="logo">
+                <a href="./index.html">
+                    <div class="logo-img">
+                    </div>
+                </a>
+            </h1>
+        </div>
+        <div class="search-box">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="ძიება" id="search">
+                <button class="search-icon">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="nav-icon mic-icon">
+                <i class="fas fa-microphone"></i>
+            </div>
+        </div>
+        <div class="user-dash">
+            <div class="icons">
+                <div class="nav-icon user-icon user-camera">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="nav-icon user-icon user-notif">
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="nav-icon user-pfp" id="pfp">
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <main>
+    <div class="authenticate" id="authenticate">
+        <p class="authenticate__title" id="auth_title">
+            LOGIN
+        </p>
+        <form class="authenticate__form" id="authenticateForm">
+            <input type="text" class="authenticate__form__input" placeholder="Email" Id="emailInput">
+            <div class="authenticate__form__validation hidden" id="emailValidation">Email is invalid!</div>
+            <input type="password" class="authenticate__form__input" placeholder="Password" id="password">
+            <button type="button" class="authenticate__form__button">LOG IN</button>
+            <button type="button" class="authenticate__form__button-secondary" id="register_button">SIGN UP</button>
+        </form>
+
+        <form class="registration__form hidden" id="registration">
+            <input type="text" class="authenticate__form__input" placeholder="Email" Id="register_emailInput">
+            <div class="authenticate__form__validation hidden" id="registration_emailValidation">Email is invalid!</div>
+            <input type="password" class="authenticate__form__input" placeholder="Password" id="registration_password">
+            <input type="password" class="authenticate__form__input" placeholder="Confirm Password" id="confirm_password">
+            <div class="authenticate__form__validation hidden" id="registration_confirm_password">Passwords must match and password must contain at least 6 character</div>
+            <button type="button" class="authenticate__form__button" id="register_submit_button">SIGN UP</button>
+            <p class="registration__form__text">
+                <button type="button" class="authenticate__form__button-secondary" id="sign_in_button">SIGN IN</button>
+                OR LOG IN WITH</p>
+            <ul class="registration__form__list">
+                <li class="registration__form__list__item">
+                    <a>
+                        <i class="fab fa-google"></i>
+                    </a>
+                </li>
+                <li class="registration__form__list__item">
+                    <a>
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="registration__form__list__item">
+                    <a>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="registration__form__list__item">
+                    <a>
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li class="registration__form__list__item">
+                    <a>
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</main>
+<script src="./scripts/auth.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js"></script> -->
+</body>
+</html>

@@ -157,7 +157,7 @@ header {
   background-image: url("../assets/images/pfp.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 @media only screen and (max-width: 1300px) {
   .user-dash {
@@ -324,59 +324,4 @@ i {
 
 .hidden {
   display: none !important;
-}
-
-.authenticate {
-  position: absolute;
-  top: 25%;
-  left: 35%;
-  border-radius: 15px;
-  background-color: #0F0F0F;
-  width: 30%;
-  min-width: 370px;
-  min-height: 50px;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-.authenticate__title {
-  font-size: 2rem;
-  color: #F6F6F6;
-  background-color: transparent;
-  height: 10%;
-}
-.authenticate__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: transparent;
-}
-.authenticate__form__input {
-  font-size: 1.125rem;
-  box-sizing: border-box;
-  padding: 5px;
-  color: #F6F6F6;
-  height: 50px;
-  width: 350px;
-  margin-top: 20px;
-  border: 0.2px solid #6D9886;
-  border-radius: 5px;
-}
-.authenticate__form__validation {
-  color: red;
-  margin-top: 4px;
-  background-color: transparent;
-}
-.authenticate__form__button {
-  margin-top: 10px;
-  height: 35px;
-  width: 90px;
-  text-align: center;
-  border: 0;
-  background-color: #6D9886;
-  border-radius: 10px;
-  cursor: pointer;
 }/*# sourceMappingURL=common.css.map */
