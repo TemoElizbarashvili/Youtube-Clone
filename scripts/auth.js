@@ -29,20 +29,6 @@ signInButton.addEventListener("click", () => {
     SignUpForm.classList.add("hidden");
 });
 
-let authForm = document.getElementById("authenticate");
-let profilePicture = document.getElementById("pfp");
-
-profilePicture.addEventListener("click", function() {
-    if (!isLoggedIn) {
-        authForm.classList.contains('hidden') ? authForm.classList.remove('hidden') : authForm.classList.add('hidden');
-    } else { 
-        isLoggedIn = false;
-        localStorage.removeItem('email');
-        localStorage.removeItem('profileImage');
-        profilePicture.style.backgroundImage = 'url("../assets/images/pfp.jpg")';
-    }
-});
-
 let emailInput = document.getElementById("emailInput");
 let emailValidation = document.getElementById("emailValidation");
 let submitButton = document.getElementsByClassName("authenticate__form__button")[0];
@@ -144,7 +130,10 @@ submitButton.addEventListener('click', function() {
           return response.json();
         })
         .then(data => {
+            let pfp = document.getElementById("pfp");
+            pfp.style.backgroundImage = 'url("../assets/images/green-pfp.jpg")';
             localStorage.setItem("isLoggedIn", true);
+            localStorage.setItem("pfp", 'url("../assets/images/green-pfp.jpg")');
             window.location.assign("../index.html");
         })
         .catch(error => {
@@ -170,7 +159,7 @@ registerButton.addEventListener('click', () => {
       })
         .then(response => response.json())
         .then(data => {
-            //signInButton.click();
+            signInButton.click();
             console.log(data);
         })
         .catch(error => {

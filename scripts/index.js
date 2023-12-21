@@ -99,6 +99,30 @@ const videoArray = [
         views: '69.8 ათ.',
         uploadedDaysAgo: 23,
       },
+      {
+        imageUrl: 'https://i.ytimg.com/vi/u3WajuShD1w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBvakB0yzlV2j4UWLn1WlkxIWHmlA',
+        channelImageUrl: 'https://yt3.googleusercontent.com/ytc/APkrFKb-3Tg8dXNbWlqm1lPlda1Xs_SURtanioT0NoLbQw=s900-c-k-c0x00ffffff-no-rj',
+        title: 'ტირთან შეხვედრა God of War Ragnarök PS5 ნაწილი 10',
+        channelName: 'Go Lets Play',
+        views: '8.8 მ.',
+        uploadedDaysAgo: 3,
+    },
+    {
+      imageUrl: 'https://androgaming.com/wp-content/uploads/2023/02/UltimateSackboy_F-800x445.jpg',
+      channelImageUrl: 'https://play-lh.googleusercontent.com/AibwffxOzlyGj2poR5oFHJZfPP0_RgdGQ1ICJVpE4rAbU1VtjLX3St9pdburxFHTIOQ',
+      title: 'Ultimate Sackboy Review',
+      channelName: 'Gamer720P',
+      views: '12.5 ათ.',
+      uploadedDaysAgo: 15,
+    },
+    {
+      imageUrl: 'https://i.ytimg.com/vi/N-xHcvug3WI/maxresdefault.jpg',
+      channelImageUrl: 'https://bcassetcdn.com/public/blog/wp-content/uploads/2021/12/08165149/Kids-Diana-Show-1024x1024.jpg',
+      title: 'JavaScript Tutorial for Beginners',
+      channelName: 'Entertainment ',
+      views: '23.5 ათ.',
+      uploadedDaysAgo: 15,
+    },
   ];
 
 

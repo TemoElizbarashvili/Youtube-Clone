@@ -57,6 +57,8 @@ loginPageButton.addEventListener("click", () => {
 
     if(isLoggedIn) {
         if (confirm("Do you really want to log out? ")) {
+            let pfp = document.getElementById("pfp");
+            pfp.style.backgroundImage = 'url("../assets/images/pfp.jpg")';
             localStorage.clear();
         } else {
             
@@ -66,3 +68,11 @@ loginPageButton.addEventListener("click", () => {
     }
 });
 
+
+function setPfp() {
+    let uri = localStorage.getItem("pfp");
+    let pfp = document.getElementById("pfp");
+    pfp.style.backgroundImage = uri;
+} 
+
+setPfp();
